@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-       app = docker.build("Add5/kiii-lab4")
+       app = docker.build("add5/kiii-lab4")
     }
     stage('Push image') {   
         docker.withRegistry('https://registry.hub.docker.com', 'kiii-dockerhub') {
